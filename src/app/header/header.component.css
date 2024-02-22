@@ -1,0 +1,59 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 2rem;
+    border: 1px solid var(--borders);
+    background-color: var(--color-sec-bg);
+}
+
+h1 {
+    font-size: 2.4rem;
+    color: var(--color-text);
+}
+
+.btn_primary {
+    border: none;
+    padding: 1em;
+    border-radius: 3rem;
+    cursor: pointer;
+    white-space: nowrap;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #fff;
+    background-color: #635fc7;
+}
+
+.btn_primary:hover{
+    background-color: var(--btn-hover);
+}
+
+.nav--right {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    position: relative;
+}
+
+.btn_dots {
+    cursor: pointer;
+}
+
+.delete_container{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    background-color: #3E3F4E;
+    border-radius: 8px;
+    right: 0;
+    transform: translate(6%, 68%);
+    z-index: 100;
+    width: 14rem;
+    height: 7rem;
+    align-items: center;
+}
+
+.delete_container p {
+    color: #ea5555;
+    cursor: pointer;
+}

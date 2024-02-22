@@ -1,0 +1,45 @@
+<div class="sidebar" [class.hide]="!isSidebarShown">
+    <div class="sidebar_top">
+        <div class="logo"> <img src="assets/images/logo-light.svg" alt="main logo" srcset=""></div>
+
+        <div class="sidebar_board">
+            <div class="sidebar_list">
+                <h2>All boards({{ boards?.length }})</h2>
+                <ul>
+                    <li *ngFor="let board of boards; let  i = index" (click)="changeBoard(i)"
+                        [class.list-active]="this.currentBoardIndex === i">
+                        <img src="assets/icons/icon-board.svg" alt="board" srcset="">
+                        <p>{{ board.name }}</p>
+                    </li>
+                    <li (click)="showCreateBoardModal()"><img src="assets/icons/icon-board.svg" alt="board" srcset="">
+                        <p class="new_board"> + Create new board </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="sidebar_bottom">
+        <div class="sidebar__toggle">
+            <!-- TO DO IN FUTURE -->
+            <!-- <div class="sidebar__toggle--theme">
+                <img src="assets/icons/icon-light-theme.svg" alt="light theme" srcset="">
+                <label class="switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" aria-label="Switch theme" />
+                    <div class="slider round"></div>
+                </label>
+                <img src="assets/icons/icon-dark-theme.svg" alt="dark theme" srcset="">
+            </div> -->
+            <div class="sidebar__toggle--show" (click)="hideSidebar()">
+                <img src="assets/icons/icon-hide-sidebar.svg" alt="toggle sidebar" srcset="">
+                <p>Hide sidebar</p>
+            </div>
+        </div>
+        <div class="show_sidebar" [class.hide]="isSidebarShown" (click)="showSidebar()">
+            <img src="assets/icons/icon-show-sidebar.svg" alt="" srcset="">
+        </div>
+    </div>
+
+</div>

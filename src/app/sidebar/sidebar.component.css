@@ -1,0 +1,131 @@
+.sidebar {
+    background-color: var(--color-sec-bg);
+    color: var(--color-text);
+    height: 100vh;
+    color: #828fa3;
+    padding: 0 3rem;
+    border: 1px solid var(--borders);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: max-content;
+    transition: margin-left .4s
+}
+
+.hide {
+    margin-left: -300px;
+}
+
+.show_sidebar {
+    cursor: pointer;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    bottom: 8rem;
+    color: #fff;
+    width: 12rem;
+    height: 6rem;
+    background: #635FC7;
+    border-radius: 0 25px 25px 0;
+    animation: fadeIn .3s ease-in;
+    transition: background-color .2s ease;
+}
+
+.sidebar_bottom {
+    padding-bottom: 3rem;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+li p {
+    font-weight: 700;
+}
+
+.logo {
+    padding: 2rem 0;
+}
+
+.sidebar h2 {
+    font-size: 1.6rem;
+    padding: 1.5rem 0;
+}
+
+.sidebar_list li {
+    cursor: pointer;
+    padding: 1rem 3rem;
+    list-style-type: none;
+    transition: color .6s, background-color .6s;
+    border-radius: 0 25px 25px 0;
+    margin-left: -30%;
+    padding-left: 30%;
+}
+
+.sidebar_list li:hover {
+    background-color: var(--btn-hover);
+    color: var(--color-text);
+}
+
+.sidebar__toggle--show {
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    cursor: pointer;
+}
+
+.sidebar__toggle--theme {
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background-color: #20212C;
+}
+
+.list-active {
+    background-color: #635fc7;
+    color: var(--color-text);
+}
+
+.switch {
+    display: inline-block;
+    height: 20px;
+    position: relative;
+    width: 40px;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    background-color: #635FC7;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .3s;
+}
+
+.slider :hover {
+    background-color: #A8A4FF;
+}
+
+.round {
+    border-radius: 34px;
+}
+
+.round:before {
+    border-radius: 50%;
+}
+
+.new_board{
+    color: #635fc7;
+}

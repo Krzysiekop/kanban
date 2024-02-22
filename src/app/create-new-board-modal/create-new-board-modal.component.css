@@ -1,0 +1,142 @@
+.board_modal {
+    display: block;
+    position: fixed;
+    z-index: 10;
+    width: 480px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    background: var(--color-sec-bg);
+    padding: 2rem;
+    border-radius: 6px;
+    max-height: 90%;
+    overflow: auto;
+    color: var(--color-text);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input {
+    padding: 0.5rem;
+    /* border: 1px solid rgba(130,143,163,.25); */
+    border: 2px solid rgba(130, 143, 163, .4);
+    background: transparent;
+    color: var(--color-text);
+    outline: none;
+    font-family: Plus Jakarta Sans, sans-serif;
+    margin: 1rem 0;
+    border-radius: 4px;
+    transition: border .3s;
+    width: 100%;
+}
+
+form input :focus-visible {
+    border-color: #635fc7;
+}
+
+h2 {
+    padding-bottom: 1.5rem;
+}
+
+label {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+   
+}
+
+.create_subtask_btn {
+    font-size: 13px;
+    color: #635fc7;
+    background-color: var(--secondary-button-color);
+    transition: background-color .3s;
+    border: none;
+    padding: 1rem;
+    border-radius: 3rem;
+    cursor: pointer;
+    white-space: nowrap;
+    font-weight: 700;
+    margin: 1.5rem 0;
+}
+
+.create_board_btn {
+    border: none;
+    padding: 1em;
+    border-radius: 3rem;
+    cursor: pointer;
+    white-space: nowrap;
+    font-weight: 700;
+    font-size: 13px;
+    color: #fff;
+    background-color: #635fc7;
+    margin: 1.5rem 0;
+    transition: background-color .3s;
+}
+
+.create_board_btn:hover {
+    background-color: #a8a4ff;
+}
+
+.create_board_btn:disabled {
+    background-color: rgba(130, 143, 163, .4);
+    cursor: not-allowed;
+}
+
+.description {
+    padding: 0.5rem;
+    border: 2px solid rgba(130, 143, 163, .4);
+    background: transparent;
+    color: var(--color-text);
+    outline: none;
+    font-family: Plus Jakarta Sans, sans-serif;
+    margin: 0.5rem 0 1rem;
+    min-height: 115px;
+    border-radius: 4px;
+    resize: none;
+    transition: border .3s;
+    margin-bottom: 1.5rem;
+}
+
+.description :focus-visible {
+    /* border-color: #635fc7; */
+    border: 2px solid rgba #635fc7;
+}
+
+.select_status {
+    -webkit-appearance: none;
+    appearance: none;
+    border: 2px solid rgba(130, 143, 163, .4);
+    background: transparent;
+    color: var(--color-text);
+    outline: none;
+    padding: 0.5rem;
+    background-image: url('/assets/icons/icon-chevron-down.svg');
+    background-repeat: no-repeat;
+    background-position: 97.5%;
+    border-radius: 6px;
+}
+
+.select_status :focus-visible {
+    border-color: #635fc7;
+}
+
+.select_status option {
+    background-color: var(--color-bg);
+    padding: 0.5rem;
+}
+
+.alert{
+    display: block;
+    color: #ea5555;
+    position: absolute;
+    right: 2px;
+    text-wrap: nowrap;
+    bottom: 8px;
+}
+
+.form_wrap{
+    position: relative;;
+}

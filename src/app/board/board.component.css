@@ -1,0 +1,46 @@
+.board {
+    display: flex;
+    padding: 2rem;
+    gap: 5rem;
+    color: var(--color-text);
+}
+
+.column {
+    width: 20rem;
+}
+
+.task {
+    background-color: var(--color-sec-bg);
+    margin: 2rem 0;
+    padding: 1rem;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: color .3s;
+}
+
+.task:hover {
+    color: #635fc7;
+
+}
+
+.subtask {
+    color: #828fa3;
+    font-size: 1.2rem;
+}
+
+.column_head {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    color: #828fa3;
+}
+
+.circle {
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    background-color: #49c4e5;
+    margin-right: 0.5rem;
+    border-radius: 50%;
+}

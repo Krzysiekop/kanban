@@ -1,0 +1,25 @@
+<div class="task_modal">
+    <div class="task_head">
+        <h2>{{ task.title }}</h2>
+        <img class="btn_dots" src="assets/icons/icon-vertical-ellipsis.svg" alt="3 dots button" srcset=""
+            (click)="showDeleteButton()">
+        <div class="delete_container" *ngIf="isDeleteButtonShown">
+            <p (click)="deleteTask()"> Delete </p>
+        </div>
+    </div>
+    <p class="description"> {{ task.description}} </p>
+
+    <form [formGroup]="editTaskForm">
+
+        <label for="status">Change status</label>
+        <select formControlName="status" class="select_status" name="status" id="status"
+            (change)="onStatusChange($event)">
+
+            <option *ngFor="let option of selectOptions; let i = index" [ngValue]="i">
+                {{ option }}
+            </option>
+
+        </select>
+
+    </form>
+</div>

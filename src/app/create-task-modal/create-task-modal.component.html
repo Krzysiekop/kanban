@@ -1,0 +1,40 @@
+<div class="task_modal">
+    <h2> Add new task </h2>
+    <form [formGroup]="newTaskForm" (submit)="createNewTask()">
+        <div class="form_wrap">
+            <label for="title">Title</label>
+            <input type="text" formControlName="title" name="title" placeholder="e.g. Take coffe brake">
+
+            <div *ngIf="title?.invalid && (title?.dirty || title?.touched)" class="alert">
+                <div *ngIf="title?.errors?.['required']" class="alert card_name_alert">Name is required.
+                </div>
+                <div *ngIf="title?.errors?.['minlength']" class="alert">
+                    Name must be at least 4 characters long.
+                </div>
+            </div>
+        </div>
+
+        <label for="description">Description</label>
+        <textarea formControlName="description" class="description" name="description"
+            placeholder="e.g. It's always good to take a break. This 15 minute break will recharge the batteries a little."></textarea>
+
+        <!-- TO DO IN FUTURE -->
+        <!-- <label for="subtasks">Subtasks</label>
+        <input type="text" formControlName="subtask" placeholder="e.g Make coffe">
+        <button class="create_subtask_btn">+Add new subtask</button> -->
+        <div class="form_wrap--option">
+            <label for="status">Status</label>
+            <select formControlName="status" class="select_status" name="status" id="">
+                <option *ngFor="let option of selectOptions; let i = index" [ngValue]="i">
+                    {{ option }}
+                </option>
+            </select>
+            <div *ngIf="status?.invalid && (status?.dirty || status?.touched)" class="alert_option">
+                <div *ngIf="status?.errors?.['required']">Status is required.
+                </div>
+            </div>
+        </div>
+        <button type="submit" [disabled]="!newTaskForm.valid" class="create_task_btn">Create task</button>
+
+    </form>
+</div>

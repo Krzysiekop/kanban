@@ -1,0 +1,27 @@
+<div class="board" *ngIf="currentLocalStorageData?.boards[this.currentBoardIndex]?.columns; else elseblock2">
+    <div class="column"
+        *ngFor="let column of currentLocalStorageData.boards[this.currentBoardIndex].columns; let columnIndex = index"
+        (drop)="onDrop(columnIndex)" (dragover)="onDragOver($event)">
+
+        <div *ngIf="column.tasks else elseBlock">
+            <div class="column_head"> <span class="circle"></span> {{column.name}} ({{ column.tasks.length }}) </div>
+            <div class="task" *ngFor="let task of column.tasks; let taskIndex = index"
+                (dragstart)="onDragStart(taskIndex, columnIndex)" (click)="showTask(taskIndex, columnIndex)"
+                draggable="true">
+                {{task.title}}
+                <!-- TO DO IN FUTURE -->
+                <!-- <p class="subtask" *ngIf="task.subtasks">{{ numberOfCompletedSubtasks(task.subtasks) }} of {{
+                    task.subtasks.length }} subtask</p> -->
+            </div>
+        </div>
+        <ng-template #elseBlock>
+            <div class="column_head"> <span class="circle"></span> {{column.name}} ({{ 0 }}) </div>
+        </ng-template>
+
+    </div>
+</div>
+<ng-template #elseblock2>
+    <div class="board">
+        Create some new boards :)
+    </div>
+</ng-template>

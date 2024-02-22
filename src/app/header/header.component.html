@@ -1,0 +1,11 @@
+<div class="nav">
+
+    <h1>{{ title }}</h1>
+    <div class="nav--right">
+        <button class="btn_primary" (click)="createNewTaskModal()">+Add new task</button>
+        <img class="btn_dots" src="assets/icons/icon-vertical-ellipsis.svg" alt="3 dots button" srcset="" (click)="showDeleteButton()">
+        <div class="delete_container"   *ngIf="isDeleteButtonShown" >
+            <p (click)="deleteBoard()"> Delete board</p>
+         </div>
+    </div>
+</div>
