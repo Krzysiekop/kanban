@@ -2,7 +2,7 @@
     display: flex;
     padding: 2rem;
     gap: 5rem;
-    color: var(--color-text);
+    color: var(--text);
 }
 
 .column {
@@ -10,7 +10,7 @@
 }
 
 .task {
-    background-color: var(--color-sec-bg);
+    background-color: var(--sec-background);
     margin: 2rem 0;
     padding: 1rem;
     font-weight: 700;

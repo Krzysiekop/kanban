@@ -1,6 +1,6 @@
 .sidebar {
-    background-color: var(--color-sec-bg);
-    color: var(--color-text);
+    background-color: var(--sec-background);
+    color: var(--text);
     height: 100vh;
     color: #828fa3;
     padding: 0 3rem;
@@ -68,7 +68,7 @@ li p {
 
 .sidebar_list li:hover {
     background-color: var(--btn-hover);
-    color: var(--color-text);
+    color: var(--text-sidebar-hover);
 }
 
 .sidebar__toggle--show {
@@ -84,48 +84,77 @@ li p {
     display: flex;
     align-items: center;
     gap: 2rem;
-    background-color: #20212C;
+    background-color: var(--background);
+    justify-content: space-between;
 }
 
 .list-active {
     background-color: #635fc7;
-    color: var(--color-text);
+    color: var(--text-sidebar);
 }
 
 .switch {
-    display: inline-block;
-    height: 20px;
     position: relative;
-    width: 40px;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
 }
 
+/* Hide default HTML checkbox */
 .switch input {
-    display: none;
+    opacity: 0;
+    width: 0;
+    height: 0;
 }
 
+/* The slider */
 .slider {
-    background-color: #635FC7;
-    bottom: 0;
-    cursor: pointer;
-    left: 0;
     position: absolute;
-    right: 0;
+    cursor: pointer;
     top: 0;
-    transition: .3s;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #635fc7;
+    -webkit-transition: .4s;
+    transition: .4s;
 }
 
-.slider :hover {
-    background-color: #A8A4FF;
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
 }
 
-.round {
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
     border-radius: 34px;
 }
 
-.round:before {
+.slider.round:before {
     border-radius: 50%;
 }
 
-.new_board{
+.new_board {
     color: #635fc7;
 }

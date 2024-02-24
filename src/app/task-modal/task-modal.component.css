@@ -6,12 +6,12 @@
     left: 50%;
     transform: translate(-50%, -50%);
     top: 50%;
-    background: var(--color-sec-bg);
+    background: var(--sec-background);
     padding: 2rem;
     border-radius: 6px;
     max-height: 90%;
     overflow: auto;
-    color: var(--color-text);
+    color: var(--text);
 }
 
 .task_head{
@@ -29,7 +29,7 @@
     position: absolute;
     display: flex;
     justify-content: center;
-    background-color: var(--color-bg);
+    background-color: var(--background);
     border-radius: 8px;
     right: 0;
     transform: translate(4%, 26%);
@@ -55,7 +55,7 @@ form input {
     /* border: 1px solid rgba(130,143,163,.25); */
     border: 2px solid rgba(130, 143, 163, .4);
     background: transparent;
-    color: var(--color-text);
+    color: var(--text);
     outline: none;
     font-family: Plus Jakarta Sans, sans-serif;
     margin: 1rem 0;
@@ -128,7 +128,7 @@ label {
     appearance: none;
     border: 2px solid rgba(130, 143, 163, .4);
     background: transparent;
-    color: var(--color-text);
+    color: var(--text);
     outline: none;
     padding: 0.5rem;
     background-image: url('/assets/icons/icon-chevron-down.svg');
@@ -142,7 +142,7 @@ label {
 }
 
 .select_status option {
-    background-color: var(--color-bg);
+    background-color: var(--background);
     padding: 0.5rem;
 }
 
